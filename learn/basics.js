@@ -6,7 +6,7 @@ let b = ' - number one'
 
 let c  = a + b
 
-console.log(c)
+console.log('c', c)
 
 //2. dimostrazione ==, ===, != e !==
 let d = '2'
@@ -131,7 +131,7 @@ let car = {
         },
         {
             id: 4,
-            usury: 70
+            usury: 5
         }
     ],
     odometer: 0,
@@ -156,3 +156,13 @@ let car = {
     }
 }
 car.start()
+
+let sum1 = function(a,b) {
+    return a + b
+}
+
+let sum2 = function(sum) {
+    return sum1(1, sum1(2, sum1(3,4)))
+}
+
+console.log('sums', sum2(sum1))
