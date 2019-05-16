@@ -1,19 +1,9 @@
 const fs = require('fs')
 
-// fs.readdir('.', (err, files) => {
-//     if (err) console.log(err)
-
-//     files.forEach(f => {
-//         console.log(f)
-//     })
-//     return files;
-// })        
-
-// let files = fs.readdirSync('.')
-// files.forEach(f => {
-//     console.log(f)
-// })
-
+//leggere il file settings.info, che contiene una riga composta
+//da <DIRNAME>,<EXTENSION>. Creare una cartella <DIRNAME> se non esiste
+// e copiare tutti i file con estensione <EXTENSION> dalla cartella
+//corrente alla cartella <DIRNAME>
 fs.readFile('settings.info', { encoding: 'utf8'}, (err, data) => {
 
     const names = data.split(',')

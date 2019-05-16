@@ -1,3 +1,4 @@
+//costrutti di Promise e async/wait
 async function testAsync() {
     let tick = 1;
     let int = setInterval(() => {
